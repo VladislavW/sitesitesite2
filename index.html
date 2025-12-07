@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Ethers.js Example</title>
-<!-- Подключение библиотеки Ethers.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.2.0/ethers.umd.js">
-</script>
+    <meta charset="utf-8">
+    <title>MetaMask и смарт-контракт</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.2.0/ethers.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Простой контракт Ethers.js</h1>
-<input type="text" id="messageInput" placeholder="Введите сообщение">
-<button id="setMessageButton">Установить сообщение</button>
-<button id="getMessageButton">Получить сообщение</button>
-
-4
-
-<p>Сообщение: <span id="messageDisplay"></span></p>
-<script src="script.js"></script>
+    <h1>Взаимодействие с кошельком и контрактом</h1>
+    
+    <button id="connectButton">Подключить MetaMask</button>
+    <div id="accountInfo"></div>
+    
+    <hr>
+    
+    <h2>Работа со смарт-контрактом</h2>
+    
+    <div>
+        <input type="text" id="messageInput" placeholder="Введите сообщение">
+        <button id="setMessageButton">Установить сообщение</button>
+        <p><small>Эта операция требует газа (платная)</small></p>
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <button id="getMessageButton">Получить сообщение</button>
+        <p><small>Эта операция бесплатная</small></p>
+    </div>
+    
+    <div id="messageDisplay" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; min-height: 50px;">
+        Здесь будет отображаться сообщение...
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
